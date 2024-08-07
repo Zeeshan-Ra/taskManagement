@@ -25,7 +25,7 @@ const Signup = () => {
         alert("All fields are required")
       }
       else {
-        const response = await axios.post("http://localhost:8200/api/v1/signup", data);
+        const response = await axios.post("https://taskmanagementbackend-0x02.onrender.com/api/v1/signup", data);
         setData({ username: "", email: "", password: "" })
         console.log(response);
         navigate("/login")
