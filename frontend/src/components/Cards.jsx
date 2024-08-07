@@ -13,7 +13,7 @@ const Cards = ({ home, setInputDiv, Task, setUpdatedData, setTask }) => {
 
     const handsleCompleteTask = async (id) => {
         try {
-            const response = await axios.put(`http://localhost:8200/api/v2/update-comp-task/${id}`, {}, { headers });
+            const response = await axios.put(`https://taskmanagementbackend-0x02.onrender.com/api/v2/update-comp-task/${id}`, {}, { headers });
         } catch (error) {
             console.log(error)
         }
@@ -21,7 +21,7 @@ const Cards = ({ home, setInputDiv, Task, setUpdatedData, setTask }) => {
 
     const handleImportant = async (id) => {
         try {
-            const response = await axios.put(`http://localhost:8200/api/v2/update-imp-task/${id}`, {}, { headers });
+            const response = await axios.put(`https://taskmanagementbackend-0x02.onrender.com/api/v2/update-imp-task/${id}`, {}, { headers });
             alert(response.data.message)
         } catch (error) {
             console.log(error)
@@ -30,7 +30,7 @@ const Cards = ({ home, setInputDiv, Task, setUpdatedData, setTask }) => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:8200/api/v2/delete-task/${id}`, { headers });
+            const response = await axios.delete(`https://taskmanagementbackend-0x02.onrender.com/api/v2/delete-task/${id}`, { headers });
             alert(response.data.message)
         } catch (error) {
             console.log(error)
