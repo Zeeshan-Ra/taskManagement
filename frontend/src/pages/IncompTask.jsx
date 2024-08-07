@@ -13,7 +13,7 @@ const IncompTask = () => {
   useEffect(() => {
     const fetch = async () => {
       try {
-        const response = await axios.get("http://localhost:8200/api/v2/get-incomplete-task",
+        const response = await axios.get("https://taskmanagementbackend-0x02.onrender.com/api/v2/get-incomplete-task",
           { headers }
         );
         setTask(response.data.data);
