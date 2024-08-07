@@ -25,7 +25,7 @@ const InputData = ({ inputDiv, setInputDiv, updatedData, setUpdatedData }) => {
             alert("All fields are required")
         }
         else {
-            await axios.post("http://localhost:8200/api/v2/create-task", Data, { headers })
+            await axios.post("https://taskmanagementbackend-0x02.onrender.com/api/v2/create-task", Data, { headers })
         };
         setData({ title: "", desc: "" });
         setInputDiv("hidden")
@@ -36,7 +36,7 @@ const InputData = ({ inputDiv, setInputDiv, updatedData, setUpdatedData }) => {
             alert("All fields are required")
         }
         else {
-            await axios.put(`http://localhost:8200/api/v2/update-task/${updatedData.id}`, Data, { headers })
+            await axios.put(`https://taskmanagementbackend-0x02.onrender.com/api/v2/update-task/${updatedData.id}`, Data, { headers })
         };
         setUpdatedData({ id: "", title: "", desc: "" })
         setInputDiv("hidden");
